@@ -1,0 +1,11 @@
+[Unit]
+Description=Disable Proxmox Firewall
+
+[Service]
+ExecStart=/usr/local/bin/disable_proxmox_firewall.sh
+Type=simple
+Restart=always
+RestartSec=10s              # change it as you wish
+
+[Install]
+WantedBy=multi-user.target
